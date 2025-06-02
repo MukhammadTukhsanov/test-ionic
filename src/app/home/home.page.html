@@ -15,150 +15,172 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" color="dark">
-  <!-- Profile Section -->
-  <div class="profile-section">
-    <div class="profile-header">
-      <div class="profile-avatar">
-        <img
-          src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
-          alt="Miguel"
-        />
-      </div>
-      <div class="profile-info">
-        <div class="name-section">
-          <h2>Miguel</h2>
-          <div class="checkmark-circle">
-            <ion-icon name="checkmark-outline"></ion-icon>
+  <div class="main-container">
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <img
+            src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
+            alt="Miguel"
+          />
+        </div>
+        <div class="profile-info">
+          <div class="name-section">
+            <h2>Miguel</h2>
+            <div class="checkmark-circle">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="rating">
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <span class="rating-text">4.5 <span> (122)</span></span>
+          </div>
+          <div class="expertise">
+            <span class="expert-tag">Expert in boxing</span>
+            <span class="tag">Yoga</span>
+            <span class="tag">HIIT</span>
           </div>
         </div>
-        <div class="rating">
-          <ion-icon class="star" name="star"></ion-icon>
-          <ion-icon class="star" name="star"></ion-icon>
-          <ion-icon class="star" name="star"></ion-icon>
-          <ion-icon class="star" name="star"></ion-icon>
-          <ion-icon class="star" name="star"></ion-icon>
-          <span class="rating-text">4.5 <span> (122)</span></span>
+        <ion-button fill="clear" size="small">
+          <ion-icon color="light" name="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="bio-wrapper">
+        <p class="bio">
+          Professional fighter with over 20 years of boxing experience, renowned
+          for unparalleled discipline, technical skill, and a fierce competitive
+          spirit. Has trained and competed at the highest levels around the
+          world.
+        </p>
+        <label for="toggle-bio" class="show-more">Show more</label>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats-section">
+        <div class="stat">
+          <div class="stat-label">Followers</div>
+          <div class="stat-number">1.25M</div>
         </div>
-        <div class="expertise">
-          <span class="expert-tag">Expert in boxing</span>
-          <span class="tag">Yoga</span>
-          <span class="tag">HIIT</span>
+        <div class="stat">
+          <div class="stat-label">Following</div>
+          <div class="stat-number">120K</div>
         </div>
-      </div>
-      <ion-button fill="clear" size="small">
-        <ion-icon color="light" name="ellipsis-vertical"></ion-icon>
-      </ion-button>
-    </div>
-
-    <div class="bio-wrapper">
-      <p class="bio">
-        Professional fighter with over 20 years of boxing experience, renowned
-        for unparalleled discipline, technical skill, and a fierce competitive
-        spirit. Has trained and competed at the highest levels around the world.
-      </p>
-      <label for="toggle-bio" class="show-more">... Show more</label>
-    </div>
-
-    <!-- Stats Section -->
-    <div class="stats-section">
-      <div class="stat">
-        <div class="stat-label">Followers</div>
-        <div class="stat-number">1.25M</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Following</div>
-        <div class="stat-number">120K</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Games</div>
-        <div class="stat-number">198</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Wins</div>
-        <div class="stat-number">1,233</div>
-      </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="action-buttons">
-      <ion-button class="action-button">
-        <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
-        Chat
-      </ion-button>
-
-      <ion-button class="action-button"> Subscribe </ion-button>
-
-      <ion-button class="action-button active"> Follow </ion-button>
-    </div>
-  </div>
-
-  <!-- Tabs Section -->
-  <div class="tabs-section">
-    <div class="tab-buttons">
-      <button class="tab-button active">Channel</button>
-      <button class="tab-button">Game</button>
-    </div>
-
-    <!-- Content Grid -->
-    <div class="content-grid">
-      <div class="content-item">
-        <img
-          src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
-          alt="Content 1"
-        />
-        <div class="bg-filter-dark"></div>
-        <div class="subscribe-btn">
-          <ion-icon name="lock"></ion-icon>
-          <ion-button size="small"> Subscribe </ion-button>
+        <div class="stat">
+          <div class="stat-label">Games</div>
+          <div class="stat-number">198</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Wins</div>
+          <div class="stat-number">1,233</div>
         </div>
       </div>
 
-      <div class="content-item">
-        <img
-          src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
-          alt="Content 2"
-        />
-        <div class="bg-filter">
-          <div class="content-overlay">
-            <ion-button fill="clear" size="small" class="play-button">
-              Play Now
-            </ion-button>
-            <div class="content-info">
-              <div class="duration">
-                <ion-icon name="play"></ion-icon>
-                1,230
-              </div>
-              <div class="views">
-                <ion-icon name="eye-outline"></ion-icon>
-                123
-              </div>
-              <div class="likes">
-                <ion-icon name="heart-outline"></ion-icon>
-                45
-              </div>
-              <div class="time">
-                <ion-icon name="timer"></ion-icon>
-                43:00
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <ion-button class="action-button" fill="clear">
+          <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
+          Chat
+        </ion-button>
+
+        <ion-button class="action-button" fill="clear"> Subscribe </ion-button>
+
+        <ion-button class="action-button active" fill="clear">
+          Follow
+        </ion-button>
+      </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="tabs-section">
+      <div class="tab-buttons">
+        <button class="tab-button active">Channel</button>
+        <button class="tab-button">Game</button>
+      </div>
+
+      <!-- Content Grid - This will be scrollable -->
+      <div class="content-grid">
+        <div class="content-item">
+          <img
+            src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
+            alt="Content 1"
+          />
+          <div class="bg-filter-dark"></div>
+          <div class="subscribe-btn">
+            <ion-icon name="lock"></ion-icon>
+            <ion-button size="small"> Subscribe </ion-button>
+          </div>
+        </div>
+
+        <div class="content-item">
+          <img
+            src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
+            alt="Content 2"
+          />
+          <div class="bg-filter">
+            <div class="content-overlay">
+              <ion-button fill="clear" size="small" class="play-button">
+                Play Now
+              </ion-button>
+              <div class="content-info">
+                <div class="duration">
+                  <ion-icon name="play"></ion-icon>
+                  1,230
+                </div>
+                <div class="views">
+                  <ion-icon name="eye-outline"></ion-icon>
+                  123
+                </div>
+                <div class="likes">
+                  <ion-icon name="heart-outline"></ion-icon>
+                  45
+                </div>
+                <div class="time">
+                  <ion-icon name="timer"></ion-icon>
+                  43:00
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="content-item">
-        <img
-          src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
-          alt="Content 3"
-        />
-        <div class="bg-filter-dark"></div>
-      </div>
+        <div class="content-item">
+          <img
+            src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
+            alt="Content 3"
+          />
+          <div class="bg-filter-dark"></div>
+        </div>
 
-      <div class="content-item">
-        <img
-          src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
-          alt="Content 4"
-        />
-        <div class="bg-filter-dark"></div>
+        <div class="content-item">
+          <img
+            src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
+            alt="Content 4"
+          />
+          <div class="bg-filter-dark"></div>
+        </div>
+
+        <!-- Add more content items to test scrolling -->
+        <div class="content-item">
+          <img
+            src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
+            alt="Content 5"
+          />
+          <div class="bg-filter-dark"></div>
+        </div>
+
+        <div class="content-item">
+          <img
+            src="https://images.unsplash.com/photo-1591027480007-a42f6ef886c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zml0bmVzfGVufDB8fDB8fHww"
+            alt="Content 6"
+          />
+          <div class="bg-filter-dark"></div>
+        </div>
       </div>
     </div>
   </div>

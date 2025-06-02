@@ -11,8 +11,8 @@ import {
 import { addIcons } from 'ionicons';
 import {
   arrowRedoOutline,
-  chatbubbleOutline,
-  checkmarkOutline,
+  chatbubblesOutline,
+  checkmarkSharp,
   chevronBack,
   ellipsisVertical,
   eyeOutline,
@@ -42,11 +42,11 @@ export class HomePage {
     addIcons({
       'chevron-back': chevronBack,
       'share-outline': arrowRedoOutline,
-      'checkmark-outline': checkmarkOutline,
+      'checkmark-outline': checkmarkSharp,
       lock: lockClosed,
       star,
       'ellipsis-vertical': ellipsisVertical,
-      'chatbubble-outline': chatbubbleOutline,
+      'chatbubble-outline': chatbubblesOutline,
       play: playOutline,
       'eye-outline': eyeOutline,
       'heart-outline': heartOutline,

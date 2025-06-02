@@ -1,6 +1,7 @@
 ion-content {
   --background: #1a1a1a;
   --color: #ffffff;
+  --overflow: hidden;
 }
 
 ion-toolbar {
@@ -10,6 +11,53 @@ ion-toolbar {
   display: flex;
   align-items: center;
   padding: 0 8px;
+}
+
+.tabs-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  background: #1a1a1a;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  padding-top: var(--ion-safe-area-top, 0); /* Account for status bar */
+}
+
+.content-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  flex: 1; /* Take remaining space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal scrolling */
+  padding: 16px 16px 64px 16px; /* Add some padding */
+
+  /* Optional: Add custom scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.content-grid::-webkit-scrollbar {
+  width: 4px;
+}
+
+.content-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.content-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .share-btn {
@@ -68,11 +116,12 @@ ion-toolbar {
     width: 22px;
     height: 22px;
     background-color: #2bad9f;
-    border-radius: 4px;
+    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;
+    font-size: 13px;
   }
   .white-icon {
     color: white;
@@ -144,10 +193,14 @@ ion-toolbar {
 }
 
 .show-more {
+  width: 110px;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, transparent, #1a1a1a 5%);
+  background: linear-gradient(to right, transparent, #1a1a1a 15%);
   padding-left: 0.3em;
   color: #2bad9f;
   cursor: pointer;
@@ -157,7 +210,7 @@ ion-toolbar {
 .stats-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .stat {
@@ -182,44 +235,38 @@ ion-toolbar {
   display: flex;
   gap: 8px;
 
-  ion-button {
-    --background-activated: #2bad9f;
-    --color-activated: #fff;
+  .action-button {
+    background: #1a1a1a;
+    color: #fff;
     flex: 1;
-    --background: #1a1a1a;
-    font-size: 12px;
-    padding: 0;
-    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    width: 100px;
     border: 1px solid #2bad9f;
     border-radius: 8px;
-    --border-radius: 8px;
-    --color: #fff;
     display: flex;
     align-items: center;
-    height: 18px !important;
-    --height: 18px !important;
-  }
+    justify-content: center;
+    min-height: 30px !important;
 
-  ion-icon {
-    font-size: 16px;
-    margin-right: 4px;
-  }
+    ion-icon {
+      font-size: 16px;
+      margin-right: 4px;
+    }
 
-  .active {
-    --background: #2bad9f;
-    border-color: #2bad9f;
-    color: #fff;
+    &.active {
+      background: #2bad9f;
+      border-color: #2bad9f;
+      color: #fff;
+    }
   }
-}
-
-.tabs-section {
-  background: #1a1a1a;
 }
 
 .tab-buttons {
   display: flex;
   border-bottom: 1px solid #333333;
-  margin-bottom: 16px;
 }
 
 .tab-button {
@@ -247,17 +294,9 @@ ion-toolbar {
   }
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  padding: 0 16px 16px;
-}
-
 .content-item {
   position: relative;
   border-radius: 8px;
-  overflow: hidden;
 
   img {
     width: 100%;
